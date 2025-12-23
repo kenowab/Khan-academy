@@ -1,0 +1,87 @@
+*{margin:0;padding:0;box-sizing:border-box;text-decoration:none;border:none;outline:none;scroll-behavior:smooth}
+:root{--bg-color:#1f242d;--secondary-color:#323946;--text-color:#fff;--main-color:aqua;--muted:#b7c0cc;--border:#2a3340}
+html{font-size:62.5%;overflow-x:hidden}
+body{background:var(--bg-color);color:var(--text-color);font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+section{padding:10rem 9%;min-height:100vh}
+
+.header{position:fixed;top:0;left:0;width:100%;padding:2rem 9%;background:rgba(31,36,45,.9);display:flex;justify-content:space-between;align-items:center;z-index:1000;border-bottom:1px solid var(--border);backdrop-filter:blur(6px)}
+.logo{font-size:2.2rem;font-weight:700;color:var(--text-color);letter-spacing:.08rem}
+.navbar{display:flex;gap:3rem}
+.navbar a{font-size:1.6rem;color:var(--text-color);transition:.2s linear}
+.navbar a:hover,.navbar a.active{color:var(--main-color)}
+#menu-icon{font-size:3rem;color:var(--main-color);cursor:pointer;display:none}
+
+.home{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
+.home-img img{width:320px;height:320px;object-fit:cover;border-radius:50%;border:8px solid var(--main-color);box-shadow:0 0 0 10px var(--secondary-color)}
+.home-content h3{font-size:3rem;font-weight:700}
+.home-content h1{font-size:6rem;font-weight:700;margin:1rem 0;line-height:1.1}
+span{color:var(--main-color)}
+.home-content p{font-size:1.6rem;color:var(--muted);margin-top:1.2rem}
+.social-media{margin:2.4rem 0 2.8rem}
+.social-media a{display:inline-flex;justify-content:center;align-items:center;width:44px;height:44px;border:.2rem solid var(--main-color);font-size:2.2rem;color:var(--main-color);margin-right:1.4rem;border-radius:.6rem;transition:.25s ease}
+.social-media a:hover{background:var(--main-color);color:var(--bg-color);box-shadow:0 .5rem 1rem rgba(0,0,0,.2)}
+.btn{display:inline-block;background:var(--main-color);color:var(--bg-color);font-size:1.6rem;padding:1rem 2.6rem;border-radius:.6rem;box-shadow:0 .5rem 1rem rgba(0,0,0,.2);transition:.25s ease;font-weight:600}
+.btn:hover{background:transparent;color:var(--main-color);box-shadow:none}
+.btn-sm{padding:.7rem 1.6rem;font-size:1.4rem}
+
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:3rem;background:var(--secondary-color);align-items:center}
+.about-img img{width:100%;max-width:420px;height:auto;border-radius:1rem}
+.heading{font-size:4rem;text-align:center}
+.about-content h2{text-align:left;line-height:1.2}
+.about-content h3{font-size:2.4rem;margin-top:.8rem}
+.about-content p{font-size:1.6rem;margin:1.6rem 0;color:var(--muted)}
+
+.services h2{margin-bottom:6rem}
+.services-container{display:grid;grid-template-columns:repeat(3,1fr);gap:3rem}
+.services-box{background:var(--secondary-color);padding:3rem 2rem;border-radius:2rem;text-align:center;border:.2rem solid var(--bg-color);transition:.2s ease}
+.services-box:hover{border-color:var(--main-color);box-shadow:0 .5rem 1rem rgba(0,0,0,.15)}
+.services-box i{font-size:4rem;color:var(--main-color)}
+.services-box h3{font-size:2.4rem;margin:1.4rem 0 2rem}
+.services-box p{font-size:1.6rem;line-height:1.6;color:var(--muted);margin-bottom:2rem}
+
+.portfolio .heading{margin-bottom:3rem}
+.portfolio-actions{display:flex;gap:1.6rem;align-items:center;justify-content:space-between;margin-bottom:2rem;flex-wrap:wrap}
+#portfolioSearch{flex:1 1 240px;max-width:420px;padding:1rem 1.2rem;border-radius:.8rem;border:1px solid var(--border);background:#212733;color:var(--text-color);font-size:1.5rem}
+.filters{display:flex;gap:.8rem}
+.filter-btn{padding:.8rem 1.6rem;border-radius:.6rem;background:#212733;color:#dbe3ee;border:1px solid var(--border);cursor:pointer;font-size:1.4rem}
+.filter-btn.active{background:var(--main-color);color:var(--bg-color);border-color:transparent}
+
+.portfolio-container{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.portfolio-box{background:var(--secondary-color);border:1px solid var(--border);border-radius:1.2rem;overflow:hidden;transform:translateY(10px);opacity:0}
+.portfolio-box.show{transform:translateY(0);opacity:1;transition:.35s ease}
+.portfolio-box img{width:100%;height:200px;object-fit:cover}
+.portfolio-content{padding:1.6rem}
+.portfolio-content h3{font-size:2rem;margin-bottom:.6rem}
+.portfolio-content p{font-size:1.5rem;color:var(--muted);margin-bottom:1rem}
+
+.contact .heading{margin-bottom:2rem}
+.contact-form{display:grid;gap:1.2rem;max-width:780px;margin:0 auto}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+input,textarea{border:1px solid var(--border);border-radius:.8rem;background:#212733;color:var(--text-color);padding:1rem 1.2rem;font-size:1.5rem}
+.form-note{font-size:1.4rem;color:var(--muted);min-height:2rem}
+
+.site-footer{padding:2rem 9%;text-align:center;border-top:1px solid var(--border);color:var(--muted)}
+
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;padding:1.6rem;z-index:2000}
+.modal.show{display:flex}
+.modal-dialog{background:#1c222b;border:1px solid var(--border);border-radius:1rem;max-width:720px;width:100%;overflow:hidden;display:grid;grid-template-columns:1fr 1fr}
+.modal-close{position:absolute;top:1.2rem;right:1.2rem;background:transparent;color:#fff;font-size:2.2rem;cursor:pointer}
+.modal-dialog img{width:100%;height:100%;object-fit:cover}
+.modal-body{padding:1.6rem}
+.modal-body h3{font-size:2rem;margin-bottom:.6rem}
+.modal-body p{font-size:1.5rem;color:var(--muted);margin-bottom:1.2rem}
+
+@media(max-width:980px){
+  .home{grid-template-columns:1fr}
+  .about{grid-template-columns:1fr}
+  .services-container{grid-template-columns:repeat(2,1fr)}
+  .portfolio-container{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:680px){
+  #menu-icon{display:block}
+  .navbar{position:absolute;top:72px;right:9%;left:9%;display:none;flex-direction:column;background:#212733;border:1px solid var(--border);border-radius:1rem;padding:1rem}
+  .navbar.show{display:flex}
+  .form-row{grid-template-columns:1fr}
+  .services-container{grid-template-columns:1fr}
+  .portfolio-container{grid-template-columns:1fr}
+}

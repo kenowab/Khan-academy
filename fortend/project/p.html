@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kenenisa Gudeta | Portfolio</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./p.css">
+  <script src="./k.js" defer></script>
+</head>
+<body>
+
+<header class="header">
+  <a href="#" class="logo">Portfolio</a>
+  <i class="bx bx-menu" id="menu-icon" aria-label="Toggle navigation"></i>
+  <nav class="navbar" id="navbar">
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="home" id="home">
+  <div class="home-content">
+    <h3>Hello, I'm</h3>
+    <h1>Kenenisa Gudeta</h1>
+    <h3>AND I'M <span>Frontend Developer</span></h3>
+    <p>I build clean, responsive interfaces with modern HTML, CSS, and JavaScript. I care about performance, accessibility, and simple user experiences.</p>
+    <div class="social-media">
+      <a href="#"><i class="bx bxl-facebook"></i></a>
+      <a href="#"><i class="bx bxl-twitter"></i></a>
+      <a href="#"><i class="bx bxl-instagram"></i></a>
+      <a href="#"><i class="bx bxl-linkedin"></i></a>
+    </div>
+    <a href="assets/Kenenisa_Gudeta_CV.pdf" class="btn" download>Download CV</a>
+  </div>
+  <div class="home-img">
+    <img src="photo_2025-12-12_10-08-41 copy.jpg" alt="Portfolio Image" width="400" height="400">
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="about-img">
+    <img src="photo_2025-12-12_10-08-41 copy.jpg" alt="Profile Image" width="400" height="400">
+  </div>
+  <div class="about-content">
+    <h2 class="heading"><span>ABOUT ME</span></h2>
+    <h3>Frontend Developer</h3>
+    <p>I design and develop modern web interfaces. I focus on semantic HTML, utility-first CSS, and modular JavaScript. I iterate quickly and optimize for clarity.</p>
+    <a href="#portfolio" class="btn">Read More</a>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <h2 class="heading">Our <span>Services</span></h2>
+  <div class="services-container">
+    <div class="services-box">
+      <i class="bx bx-code-alt"></i>
+      <h3>Web Development</h3>
+      <p>Responsive websites, component-based UIs, accessibility, performance, and deployment.</p>
+      <a href="#contact" class="btn">Read More</a>
+    </div>
+    <div class="services-box">
+      <i class="bx bxs-paint"></i>
+      <h3>Graphic Design</h3>
+      <p>Clean visual identities, UI assets, and design systems aligned to brand guidelines.</p>
+      <a href="#contact" class="btn">Read More</a>
+    </div>
+    <div class="services-box">
+      <i class="bx bx-bar-chart-alt"></i>
+      <h3>Digital Marketing</h3>
+      <p>Landing pages, analytics integration, SEO-friendly markup, and conversion-focused UX.</p>
+      <a href="#contact" class="btn">Read More</a>
+    </div>
+  </div>
+</section>
+
+<section class="portfolio" id="portfolio">
+  <h2 class="heading">My <span>Portfolio</span></h2>
+
+  <div class="portfolio-actions">
+    <input type="search" id="portfolioSearch" placeholder="Search projects">
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="web">Web</button>
+      <button class="filter-btn" data-filter="design">Design</button>
+      <button class="filter-btn" data-filter="marketing">Marketing</button>
+    </div>
+  </div>
+
+  <div class="portfolio-container">
+    <div class="portfolio-box" data-category="web" data-title="Project Title 1">
+      <img src="photo_2025-12-14_17-12-49.jpg" alt="Project 1" width="300" height="200">
+      <div class="portfolio-content">
+        <h3>Project Title 1</h3>
+        <p>Responsive UI with modular components.</p>
+        <button class="btn btn-sm view-btn" data-project="1">View</button>
+      </div>
+    </div>
+
+    <div class="portfolio-box" data-category="design" data-title="Project Title 2">
+      <img src="project2.jpg" alt="Project 2" width="300" height="200">
+      <div class="portfolio-content">
+        <h3>Project Title 2</h3>
+        <p>Brand system and UI assets.</p>
+        <button class="btn btn-sm view-btn" data-project="2">View</button>
+      </div>
+    </div>
+
+    <div class="portfolio-box" data-category="marketing" data-title="Project Title 3">
+      <img src="project3.jpg" alt="Project 3" width="300" height="200">
+      <div class="portfolio-content">
+        <h3>Project Title 3</h3>
+        <p>Landing page with analytics.</p>
+        <button class="btn btn-sm view-btn" data-project="3">View</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2 class="heading">Contact <span>Me</span></h2>
+  <form class="contact-form" id="contactForm" action="#" method="post" novalidate>
+    <div class="form-row">
+      <input type="text" name="name" id="name" placeholder="Name" required>
+      <input type="email" name="email" id="email" placeholder="Email" required>
+    </div>
+    <textarea name="message" id="message" rows="5" placeholder="Message" required></textarea>
+    <button type="submit" class="btn">Send</button>
+    <p class="form-note" id="formNote"></p>
+  </form>
+</section>
+
+<footer class="site-footer">
+  <p>© 2025 Kenenisa Gudeta. All rights reserved.</p>
+</footer>
+
+<div class="modal" id="modal">
+  <div class="modal-dialog">
+    <button class="modal-close" id="modalClose"><i class="bx bx-x"></i></button>
+    <img id="modalImg" alt="">
+    <div class="modal-body">
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+      <a id="modalLink" class="btn" href="#" target="_blank">Open project</a>
+    </div>
+  </div>
+</div>
+
+<script src="ab.js"></script>
+</body>
+</html>
